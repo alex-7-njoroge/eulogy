@@ -1,0 +1,196 @@
+:root {
+  --paper: #f6f1e7;
+  --card: #fffdf8;
+  --ink: #2a2622;
+  --muted: #6d655b;
+  --accent: #3d5a47;
+  --accent-dark: #2a4033;
+  --line: #ddd3c0;
+  --gold: #a98a4b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.page { max-width: 1100px; margin: 0 auto; padding: 0 16px 56px; }
+
+/* Hero (full-width background photo) */
+.hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  text-align: center;
+  padding: 7rem 1rem;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6)),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 20px;
+}
+.eyebrow {
+  letter-spacing: 0.35em;
+  color: #e6cf9a;
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 8vw, 4.4rem);
+  line-height: 1.05;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+.hero-sub {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: #f1ebdd;
+  margin: 12px 0 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn, .switcher button {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Switcher */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 0 28px;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  background: var(--paper);
+  z-index: 5;
+}
+.switcher button { background: transparent; color: var(--accent); }
+.switcher button.active { background: var(--accent); color: #fff; }
+
+/* Eulogy */
+.eulogies { display: grid; gap: 24px; grid-template-columns: 1fr; }
+.eulogies.two-col { grid-template-columns: 1fr 1fr; }
+
+.eulogy {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 36px clamp(20px, 5vw, 56px);
+  box-shadow: 0 4px 22px rgba(60, 45, 20, 0.08);
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+}
+.eulogy-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent-dark);
+}
+.eulogy-block h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin: 26px 0 4px;
+}
+.eulogy-block p { margin: 0; text-align: justify; hyphens: auto; }
+.closing { margin: 30px 0 0; text-align: center; font-style: italic; }
+
+.scripture {
+  margin: 28px 0 0;
+  padding: 18px 22px;
+  border-left: 3px solid var(--gold);
+  background: #f4eddc;
+  font-weight: 500;
+  font-style: italic;
+}
+.scripture p { margin: 0 0 6px; }
+.scripture cite { font-size: 0.85rem; font-style: normal; color: var(--muted); }
+
+/* Photo gallery (below the eulogy, 3 rows) */
+.collage-section { margin: 48px 0 24px; }
+.collage-head { text-align: center; margin-bottom: 20px; }
+.collage-head h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  margin: 0;
+  color: var(--accent-dark);
+}
+
+.gallery-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.gallery-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 6px;
+}
+.gallery-item {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  scroll-snap-align: start;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(60, 45, 20, 0.18);
+}
+
+.foot { text-align: center; margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+
+/* Mobile */
+@media (max-width: 860px) {
+  .eulogies.two-col { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .hero { padding: 5rem 1rem; }
+  .gallery-item { width: 140px; height: 140px; }
+  .eulogy-block p { text-align: left; }
+}
+
+/* Print */
+@media print {
+  body { background: #fff; }
+  .no-print, .switcher { display: none !important; }
+  .eulogy { box-shadow: none; border: 0; page-break-inside: auto; }
+  .gallery-row { flex-wrap: wrap; overflow: visible; }
+  .gallery-item { width: 90px; height: 90px; }
+  .gallery-item img { box-shadow: none; }
+}
