@@ -3,6 +3,7 @@ import { english, kikuyu } from "./content.js";
 import PhotoCollage from "./PhotoCollage.jsx";
 import { backgroundImage } from "./images.js";
 import MapLocation from "./MapLocation.jsx";
+import Program from "./Program.jsx";
 
 const UI = {
   en: { collageTitle: "In Loving Memory" },
@@ -42,6 +43,8 @@ export default function App() {
         <p className="hero-sub">Forever in our hearts</p>
       </header>
 
+      <Program />
+
       <nav className="switcher no-print" aria-label="Language">
         <button
           className={view === "en" ? "active" : ""}
@@ -75,8 +78,6 @@ export default function App() {
       <PhotoCollage labels={UI.en} />
 
       <MapLocation />
-
-      <footer className="foot"></footer>
 
       <footer className="foot">
         <p>ACK St James Kiiniki</p>

@@ -5,7 +5,7 @@ export const english = {
   sections: [
     {
       heading: "BIRTH",
-      text: "The late John Ngugi Gikonyo was born in the year 1943 by his late parents Gikonyo Muthige and Grace Wambui Gikonyo, at Gathiga Kiiniki as the first born. He was brother to:- Serah Wanja Muhia and the Ite Andrew Ruo Gikonyo, Evan kamau gikonyo, Lucy wairimu ng'ang'a, and George githiku gikonyo. Unyinyi Wake. The late John Ngugi Gikonyo grew up just like the kids of those old age helping his parents in various home chores as farming and cattle hading.",
+      text: "The late John Ngugi Gikonyo was born in the year 1943 by his late parents Gikonyo Muthige and Grace Wambui Gikonyo, at Gathiga Kiiniki as the first born. He was brother to:- Serah Wanja Muhia and the Ite Andrew Ruo Gikonyo, Evan kamau gikonyo, Lucy wairimu ng'ang'a, and George githiku gikonyo.  The late John Ngugi Gikonyo grew up just like the kids of those old age helping his parents in various home chores as farming and cattle herding.",
     },
     {
       heading: "EDUCATION",
@@ -25,7 +25,7 @@ export const english = {
     },
     {
       heading: "CHURCH",
-      text: "The late John Ngugi Gikonyo started his confirmation classes and he was baptized in the year 1963 at Mother Church Kabete and later on confirmed at St James Kiiniki by Bishop Rt Rev Charles Muturi. They ceremonised their wedding in the year 2016 at Ack St James Kiiniki. His Godparents were Mr & Mrs Richard Munyua Ngugi. John joind KAMA in the year 2002, he was also a member of the Senior Citizens. John was a stanch member and follower of ACK ST JAMES KIINIKI until his demise.",
+      text: "The late John Ngugi Gikonyo started his confirmation classes and he was baptized in the year 1963 at Mother Church Kabete and later on confirmed at St James Kiiniki by Bishop Rt Rev Charles Muturi. They ceremonised their wedding in the year 2016 at Ack St James Kiiniki. His Godparents were Mr & Mrs Richard Munyua Ngugi. John joined KAMA in the year 2002, he was also a member of the Senior Citizens. John was a staunch member and follower of ACK ST JAMES KIINIKI until his demise.",
     },
     {
       heading: "ILLNESS",
